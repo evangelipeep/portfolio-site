@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    color:aliceblue
+}
+
+.header {
+    position: relative;
+}
+
+.layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+.layers__base {
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+}
+
+.layers__base-2 {
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+
+.layers__base-3 {
+    transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
+}
+
+.layers__base-4 {
+    transform: translate3d(0, calc(var(--scrollTop) / 10), 0);
+}
+
+.main {
+    min-height: 100vh;
+}
