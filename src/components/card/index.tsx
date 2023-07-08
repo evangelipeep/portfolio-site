@@ -29,7 +29,6 @@ const PassCard: React.FC<PassCardProps> = ({
         <div className="right-column">
           <img className="qr-code" src={qrCode} alt="qrCode" />
           <h2 className="corporation-name">{corporationName}</h2>
-          <div className="corporation-line" />
           <h1 className="full-name">{fullName}</h1>
           <p className="nickname">"{nickname}"</p>
         </div>
