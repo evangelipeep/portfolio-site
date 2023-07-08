@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react'
 import './home.css'
-import { AppBar } from '@mui/material'
 import MyAppBar from '../app-bar'
+import PassCard from '../card'
 
 export const HomePage = () => {
+  const avatarUrl = './../images/avatar.jpg'
+  const corporationName = 'Frontend-developer'
+  const fullName = 'Eric Sharipov'
+  const nickname = 'evangelipeep'
+  const serialNumber = '0002-225-09'
+  const qrCode = './../images/qr.png'
+
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window !== 'undefined') {
@@ -24,10 +31,18 @@ export const HomePage = () => {
   return (
     <>
       <MyAppBar />
+
       <header className="header">
         <div className="layers">
           <div className="layer__header">
-            <div className="layer__title">im eric</div>
+            <PassCard
+              avatar={avatarUrl}
+              corporationName={corporationName}
+              fullName={fullName}
+              nickname={nickname}
+              serialNumber={serialNumber}
+              qrCode={qrCode}
+            />
           </div>
           <img className="layer layers__base" src="./../images/fon-back.png" />
           <img
