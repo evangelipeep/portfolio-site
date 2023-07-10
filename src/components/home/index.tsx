@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import './home.css'
-import MyAppBar from '../app-bar'
 import PassCard from '../card'
 
 export const HomePage = () => {
-  const avatarUrl = './../images/avatar.jpg'
+  const avatarUrl = './../images/ava-portfolio.png'
   const corporationName = 'Frontend-developer'
   const fullName = 'Eric Sharipov'
   const nickname = 'evangelipeep'
@@ -30,8 +29,6 @@ export const HomePage = () => {
   }, [])
   return (
     <>
-      <MyAppBar />
-
       <header className="header">
         <div className="layers">
           <div className="layer__header">

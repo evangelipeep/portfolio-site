@@ -49,23 +49,25 @@ const MyAppBar: React.FC = () => {
 
   return (
     <AppBar
-      position="static"
+      position="absolute"
       color="transparent"
       elevation={0}
       sx={{
+        top: 0,
+        left: 0,
         width: '70%',
         margin: '0 auto',
         borderRadius: '20px',
         backdropFilter: 'blur(20px)',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
         marginTop: '20px',
       }}
     >
       <Toolbar>
         <img
-          src="./../images/logo.png"
+          src="./../images/logo-portfolio.png"
           alt="Logo"
-          style={{ marginRight: '16px' }}
+          style={{ marginRight: '16px', height: '50px' }}
         />
 
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
