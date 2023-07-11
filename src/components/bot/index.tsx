@@ -6,6 +6,7 @@ import {
   Box,
   Typography,
   colors,
+  Snackbar,
 } from '@mui/material'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import axios from 'axios'
@@ -22,6 +23,7 @@ interface TelegramMessage {
 const TelegramForm: React.FC = () => {
   const [senderName, setSenderName] = useState('')
   const [messageBody, setMessageBody] = useState('')
+  const [successSnackbarOpen, setSuccessSnackbarOpen] = useState(false)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -36,6 +38,7 @@ const TelegramForm: React.FC = () => {
         chat_id: CHAT_ID,
         text: `Имя отправителя: ${senderName}\n\nСообщение: ${messageBody}`,
       })
+      setSuccessSnackbarOpen(true)
     } catch (error) {
       console.error(
         'Произошла ошибка при отправке сообщения в телеграм:',
@@ -47,6 +50,10 @@ const TelegramForm: React.FC = () => {
     setMessageBody('')
   }
 
+  const handleSnackbarClose = () => {
+    setSuccessSnackbarOpen(false)
+  }
+
   return (
     <Container
       maxWidth="xs"
@@ -54,7 +61,7 @@ const TelegramForm: React.FC = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minHeight: '110vh',
+        minHeight: '100vh',
       }}
     >
       <Box
@@ -62,6 +69,7 @@ const TelegramForm: React.FC = () => {
         flexDirection="column"
         alignItems="center"
         p={4}
+        marginTop={8}
         bgcolor="white"
         borderRadius={10}
         boxShadow={1}
@@ -104,6 +112,12 @@ const TelegramForm: React.FC = () => {
           </Button>
         </form>
       </Box>
+      <Snackbar
+        open={successSnackbarOpen}
+        autoHideDuration={3000}
+        onClose={handleSnackbarClose}
+        message="Сообщение успешно отправлено в Telegram"
+      />
     </Container>
   )
 }
