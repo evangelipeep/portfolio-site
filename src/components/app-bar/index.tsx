@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './appBar.css'
 import {
   AppBar,
   Toolbar,
@@ -10,6 +11,7 @@ import {
   useMediaQuery,
 } from '@mui/material'
 import { Menu as MenuIcon } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 const MyAppBar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -41,8 +43,16 @@ const MyAppBar: React.FC = () => {
         width: '200px',
       }}
     >
-      <MenuItem onClick={handleMenuClose}>Проекты</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Навыки</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link className="link" to="/my-works-page">
+          My Works
+        </Link>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link className="link" to="/bot">
+          Telegram Bot
+        </Link>
+      </MenuItem>
       <MenuItem onClick={handleMenuClose}>Резюме</MenuItem>
     </Menu>
   )
@@ -64,24 +74,28 @@ const MyAppBar: React.FC = () => {
       }}
     >
       <Toolbar>
-        <img
-          src="./../images/logo-portfolio.png"
-          alt="Logo"
-          style={{ marginRight: '16px', height: '50px' }}
-        />
+        <Link className="link" to="/">
+          <img
+            src="./../images/logo-portfolio.png"
+            alt="Logo"
+            style={{ marginRight: '16px', height: '50px' }}
+          />
+        </Link>
 
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          evangelipeep
+          <Link to="/" className="link__home">
+            Home
+          </Link>
         </Typography>
 
         {isDesktop ? (
           <Button
             color="inherit"
-            sx={{ color: '#ffffff', '&:hover': { color: '#edae61' } }}
+            sx={{ color: '#ffffff', '&:hover': { color: '#b5895a' } }}
             onClick={handleMenuOpen}
             endIcon={<MenuIcon />}
           >
-            Портфолио
+            Portfolio
           </Button>
         ) : (
           <IconButton color="inherit" onClick={handleMenuOpen}>

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import './home.css'
 import PassCard from '../card'
+import Portfolio from '../portfolio'
+import { AppBar, Toolbar } from '@mui/material'
 
 export const HomePage = () => {
   const avatarUrl = './../images/ava-portfolio.png'
@@ -56,8 +58,11 @@ export const HomePage = () => {
           />
         </div>
       </header>
+      <AppBar position="static" sx={{ backgroundColor: '#b5895a' }}>
+        <Toolbar></Toolbar>
+      </AppBar>
 
-      <section className="main">uuu</section>
+      <Portfolio />
     </>
   )
 }
