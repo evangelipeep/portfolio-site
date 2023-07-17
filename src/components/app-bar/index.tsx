@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
-import './appBar.css'
 import {
   AppBar,
   Toolbar,
-  Typography,
   IconButton,
   Button,
   Menu,
   MenuItem,
   useMediaQuery,
 } from '@mui/material'
-import { Menu as MenuIcon } from '@mui/icons-material'
+import { Menu as MenuIcon, GitHub, LinkedIn } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 
 const MyAppBar: React.FC = () => {
@@ -74,26 +72,12 @@ const MyAppBar: React.FC = () => {
       }}
     >
       <Toolbar>
-        <Link className="link" to="/">
-          <img
-            src="./../images/logo-portfolio.png"
-            alt="Logo"
-            style={{ marginRight: '16px', height: '50px' }}
-          />
-        </Link>
-
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <Link to="/" className="link__home">
-            Home
-          </Link>
-        </Typography>
-
         {isDesktop ? (
           <Button
             color="inherit"
             sx={{ color: '#ffffff', '&:hover': { color: '#b5895a' } }}
             onClick={handleMenuOpen}
-            endIcon={<MenuIcon />}
+            startIcon={<MenuIcon />}
           >
             Portfolio
           </Button>
@@ -104,7 +88,34 @@ const MyAppBar: React.FC = () => {
         )}
 
         {isDesktop && renderMenu}
+        <div style={{ flexGrow: 1 }}></div>
+
+        <Link className="link" to="/">
+          <img
+            src="./../images/logo-portfolio.png"
+            alt="Logo"
+            style={{ height: '50px', marginRight: '16px' }}
+          />
+        </Link>
+        <div style={{ flexGrow: 1 }}></div>
+        <IconButton
+          color="inherit"
+          href="https://github.com/evangelipeep"
+          target="_blank"
+          rel="noopener"
+        >
+          <GitHub sx={{ color: '#b5895a' }} />
+        </IconButton>
+        <IconButton
+          color="inherit"
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          <LinkedIn sx={{ color: '#b5895a' }} />
+        </IconButton>
       </Toolbar>
+
       {!isDesktop && renderMenu}
     </AppBar>
   )

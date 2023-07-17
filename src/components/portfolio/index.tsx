@@ -75,6 +75,7 @@ const Portfolio: React.FC = () => {
               <Typography variant="h5" sx={{ mb: 2 }}>
                 Контакты
               </Typography>
+
               <List>
                 <ListItem>
                   <ListItemIcon>

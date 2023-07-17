@@ -3,6 +3,7 @@ import './home.css'
 import PassCard from '../card'
 import Portfolio from '../portfolio'
 import { AppBar, Toolbar } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 export const HomePage = () => {
   const avatarUrl = './../images/ava-portfolio.png'
@@ -59,9 +60,12 @@ export const HomePage = () => {
         </div>
       </header>
       <AppBar position="static" sx={{ backgroundColor: '#b5895a' }}>
-        <Toolbar></Toolbar>
+        <Toolbar sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Link className="link" to="/my-works-page">
+            My Works Page
+          </Link>
+        </Toolbar>
       </AppBar>
-
       <Portfolio />
     </>
   )
