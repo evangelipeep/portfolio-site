@@ -110,11 +110,7 @@ const Portfolio: React.FC = () => {
                     <TelegramIcon />
                   </ListItemIcon>
                   <ListItemText
-                    primary={
-                      <Link href="https://www.linkedin.com/in/your-profile">
-                        Telegram
-                      </Link>
-                    }
+                    primary={<Link href="https://t.me/berikard">Telegram</Link>}
                   />
                 </ListItem>
               </List>

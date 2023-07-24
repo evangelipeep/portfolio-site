@@ -38,10 +38,10 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Project 1',
-    image: '/images/project1.jpg',
-    technologies: ['React', 'Material-UI', 'React Router'],
-    link: '/project1',
+    title: 'Сайт для "ООО ЯРКО"',
+    image: '/images/1.png',
+    technologies: ['React', 'TypeScript', 'Reduxe', 'TailWind'],
+    link: 'https://busines-plan-full-app-frontend.vercel.app/',
   },
   {
     id: 2,

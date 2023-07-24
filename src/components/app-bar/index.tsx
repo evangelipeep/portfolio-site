@@ -51,7 +51,6 @@ const MyAppBar: React.FC = () => {
           Telegram Bot
         </Link>
       </MenuItem>
-      <MenuItem onClick={handleMenuClose}>Резюме</MenuItem>
     </Menu>
   )
 
@@ -63,11 +62,11 @@ const MyAppBar: React.FC = () => {
       sx={{
         top: 0,
         left: 0,
-        width: '70%',
+        width: '60%',
         margin: '0 auto',
         borderRadius: '20px',
         backdropFilter: 'blur(20px)',
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
         marginTop: '20px',
       }}
     >
