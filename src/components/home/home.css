@@ -25,21 +25,42 @@ body {
     background-position: center;
 }
 
-.layers__base {
-    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    .layers__base {
+        transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    }
+    
+    .layers__base-2 {
+        transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+    }
+    
+    .layers__base-3 {
+        transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
+    }
+    
+    .layers__base-4 {
+        transform: translate3d(0, calc(var(--scrollTop) / 10), 0);
+    }
+
+@media (max-width: 414px) {
+
+    .layers__base {
+        transform: none;
+    }
+    
+    .layers__base-2 {
+        transform: none;
+    }
+    
+    .layers__base-3 {
+        transform: none;
+    }
+    
+    .layers__base-4 {
+        transform: none;
+    }
+
 }
 
-.layers__base-2 {
-    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-}
-
-.layers__base-3 {
-    transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
-}
-
-.layers__base-4 {
-    transform: translate3d(0, calc(var(--scrollTop) / 10), 0);
-}
 
 
 
