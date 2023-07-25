@@ -56,18 +56,17 @@ const MyAppBar: React.FC = () => {
 
   return (
     <AppBar
-      position="absolute"
+      position="fixed"
       color="transparent"
       elevation={0}
       sx={{
-        top: 0,
-        left: 0,
+        top: '20px',
+        left: '20%',
         width: '60%',
-        margin: '0 auto',
         borderRadius: '20px',
         backdropFilter: 'blur(20px)',
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
-        marginTop: '20px',
+        zIndex: 1000,
       }}
     >
       <Toolbar>

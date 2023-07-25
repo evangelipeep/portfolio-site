@@ -5,7 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+ 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -21,3 +30,4 @@ code {
   color: #533f88;
   transition: 0.5s;
 }
+
