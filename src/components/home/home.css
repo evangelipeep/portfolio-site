@@ -41,28 +41,6 @@ body {
         transform: translate3d(0, calc(var(--scrollTop) / 10), 0);
     }
 
-@media (max-width: 414px) {
-
-    .layers__base {
-        transform: none;
-    }
-    
-    .layers__base-2 {
-        transform: none;
-    }
-    
-    .layers__base-3 {
-        transform: none;
-    }
-    
-    .layers__base-4 {
-        transform: none;
-    }
-
-}
-
-
-
 
 .main {
     min-height: 100vh;
