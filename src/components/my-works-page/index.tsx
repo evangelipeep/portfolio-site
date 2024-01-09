@@ -45,10 +45,10 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Project 2',
+    title: 'Сайт для компании "Onkron"'
     image: '/images/project2.jpg',
     technologies: ['React', 'Material-UI', 'React Router'],
-    link: '/project2',
+    link: 'https://onkron-website.vercel.app/'
   },
   {
     id: 3,
